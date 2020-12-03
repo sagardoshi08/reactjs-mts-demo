@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
+import Card from './Card';
+import Sdata from './Seriasdata';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <div className="row">
+          <div className="container">
+            <div className="col-md-12 text-center">
+              <h4>List of top five netfilx series in 2020</h4>
+            </div>
+            {Sdata.map((val,index) => {
+                return (<Card key={val.id} imgsrc={val.imgsrc} title={val.title} seriasname={val.sname} link={val.link} />)
+            })}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

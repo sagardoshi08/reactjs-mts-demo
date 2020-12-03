@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Formdemo from './Formdemo';
+import LoginForm from './LoginForm';
+import Todolist from './Todolist';
+import Counter from './Counter';
+import Keepnote from './keepnote/Keepnote';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <>
+    <App /> 
+    <Formdemo />
+    <LoginForm /> 
+    <Todolist />
+    <Counter />
+    <Keepnote />
+  </>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
